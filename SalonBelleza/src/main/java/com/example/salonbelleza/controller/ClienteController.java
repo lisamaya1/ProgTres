@@ -45,6 +45,8 @@ public class ClienteController {
     @FXML
     private DatePicker btnfecha;
 
+    private List<Cliente> listaClientes = new ArrayList<>(); // Lista para guardar los clientes
+
 
     @FXML
     void initialize() {
@@ -72,6 +74,14 @@ public class ClienteController {
         cliente.setTelefono(txtTelefono.getText());
         cliente.setServicio((Button) btnServicio.getItems());
         cliente.setFecha((Date) btnfecha.getDayCellFactory());
+
+        listaClientes.add(cliente);  // Guardar el cliente en lista
+
+         // Mostrar el resultado 
+         txtResultado.setText("Cita agendada para: " + cliente.getNombre() + 
+                             "\nTeléfono: " + cliente.getTelefono() + 
+                             "\nServicio: " + cliente.getServicio() + 
+                             "\nFecha: " + cliente.getFecha().toString());
 
     }
 
