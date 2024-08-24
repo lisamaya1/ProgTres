@@ -1,16 +1,14 @@
 package com.example.salonbelleza.model;
 
-import javafx.scene.control.Button;
-
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Cliente {
     private String nombre;
-    private Button servicio;
+    private String servicio;
     private String telefono;
-    private Date fecha;
+    private LocalDate fecha;
 
-    public Cliente(String nombre, Button servicio, String telefono, Date fecha) {
+    public Cliente(String nombre, String servicio, String telefono, LocalDate fecha) {
         this.nombre = nombre;
         this.servicio = servicio;
         this.telefono = telefono;
@@ -28,11 +26,11 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public Button getServicio() {
+    public String getServicio() {
         return servicio;
     }
 
-    public void setServicio(Button servicio) {
+    public void setServicio(String servicio) {
         this.servicio = servicio;
     }
 
@@ -44,11 +42,11 @@ public class Cliente {
         this.telefono = telefono;
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 }
